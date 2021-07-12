@@ -52,7 +52,7 @@ function findUserById(request, response, next) {
   const { id } = request.params;
   const indexUser = users.findIndex(userIndex => userIndex.id.toString() === id.toString());
   if(indexUser === -1){
-    return response.status(404).json({error: "Todo not found!"});
+    return response.status(404).json({error: "User not found!"});
   }
   const user = users[indexUser];
   request.user = user;
